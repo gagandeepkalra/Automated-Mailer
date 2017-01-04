@@ -52,7 +52,7 @@ for message_row in message_list:
 			message_row.append('mail sent')
 		except Exception as e:
 			raise e
-		break
+		break # Only one mail will be sent once the script is run
 
 with open('content.csv', 'wb') as b:
 	writer = csv.writer(b)
