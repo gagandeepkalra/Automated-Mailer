@@ -1,5 +1,6 @@
 import csv
 import smtplib
+import os
  
 def sendemail(from_addr, to_addr_list, cc_addr_list,
 			  subject, message,
@@ -19,6 +20,8 @@ def sendemail(from_addr, to_addr_list, cc_addr_list,
 
 
 # Program execution starts from here
+
+os.chdir(os.path.dirname(os.path.abspath(__file__))) # switch to directory this file is present in
 
 message_list = []
 
